@@ -1,3 +1,7 @@
+import { AiFillDelete } from "react-icons/ai";
+import { BiSolidEdit } from "react-icons/bi";
+
+
 const Row = (props) => {
 
 	return(
@@ -6,10 +10,10 @@ const Row = (props) => {
 			<td>{props.item.count}</td>
 			<td>{props.item.price}</td>
 			<td>{props.item.temperature}</td>
-			<td><button className="btn btn-danger"
-				onClick={() => props.changeMode("remove",props.index)}>Remove</button></td>
-			<td><button className="btn btn-secondary"
-				onClick={() => props.changeMode("edit",props.index)}>Edit</button></td>
+			<td><AiFillDelete
+				onClick={() => props.changeMode("remove",props.index)}>Remove</AiFillDelete></td>
+			<td><BiSolidEdit
+				onClick={() => props.changeMode("edit",props.index)}>Edit</BiSolidEdit></td>
 		</tr>
 	)
 }

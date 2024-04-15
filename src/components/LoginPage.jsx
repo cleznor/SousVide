@@ -26,8 +26,6 @@ function Copyright(props) {
 	);
   }
   
-  // TODO remove, this demo shouldn't need to reset the theme.
-  
 const defaultTheme = createTheme();
   
 
@@ -72,7 +70,7 @@ const LoginPage = (props) => {
 			  sm={4}
 			  md={7}
 			  sx={{
-				backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
+				backgroundImage: 'url(https://assets2.kansascitysteaks.com/dyn-images/pdp_hero/Bone-in_Spiral_Slice-86b384db85fb7a7ea7866f723168cfe1.jpg)',
 				backgroundRepeat: 'no-repeat',
 				backgroundColor: (t) =>
 				  t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],

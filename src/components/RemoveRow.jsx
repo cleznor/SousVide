@@ -1,3 +1,7 @@
+import { AiFillDelete } from "react-icons/ai";
+import { FcCancel } from "react-icons/fc";
+
+
 const RemoveRow = (props) => {
 
 	return(
@@ -6,10 +10,10 @@ const RemoveRow = (props) => {
 			<td>{props.item.count}</td>
 			<td>{props.item.price}</td>
 			<td>{props.item.temperature}</td>
-			<td><button className="btn btn-danger"
-				onClick={() => props.changeMode("cancel",0)}>Cancel</button></td>
-			<td><button className="btn btn-success"
-				onClick={() => props.removeItem(props.item._id)}>Confirm</button></td>
+			<td><FcCancel
+				onClick={() => props.changeMode("cancel",0)}>Cancel</FcCancel></td>
+			<td><AiFillDelete
+				onClick={() => props.removeItem(props.item._id)}>Confirm</AiFillDelete></td>
 		</tr>
 	)
 }
