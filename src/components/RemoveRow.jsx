@@ -7,9 +7,9 @@ const RemoveRow = (props) => {
 	return(
 		<tr>
 			<td>{props.item.type}</td>
-			<td>{props.item.count}</td>
-			<td>{props.item.price}</td>
-			<td>{props.item.temperature}</td>
+			<td>{props.item.count} Kg</td>
+			<td>{props.item.price} h</td>
+			<td>{props.item.temperature}°C</td>
 			<td><FcCancel
 				onClick={() => props.changeMode("cancel",0)}>Cancel</FcCancel></td>
 			<td><AiFillDelete
