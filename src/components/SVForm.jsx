@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SVForm = (props) => {
+
+    const navigate = useNavigate();
+
     const [state, setState] = useState({
         type: "",
         count: 0,
@@ -9,10 +13,10 @@ const SVForm = (props) => {
     });
 
     const onChange = (event) => {
-        setState((state) => ({
+        setState({
             ...state,
             [event.target.name]: event.target.value
-        }));
+        });
     };
 
     const onSubmit = (event) => {
@@ -25,17 +29,19 @@ const SVForm = (props) => {
             price: 0,
             temperature: 0
         });
+        navigate('/');
     };
 
     return (
-        <div>
-            <form className="m-3" onSubmit={onSubmit}>
-                <div className="form-group">
+        <div className="container mt-5">
+            <h2 className="mb-4"style={{ color: "white" }} >Add New Item</h2>
+            <form onSubmit={onSubmit}>
+                <div className="mb-3">
                     <label className="form-label" htmlFor="type" style={{ color: "white" }}>Type of Meat</label>
                     <select
                         name="type"
                         id="type"
-                        className="form-control"
+                        className="form-select"
                         onChange={onChange}
                         value={state.type}
                     >
@@ -46,7 +52,7 @@ const SVForm = (props) => {
                         <option value="Pork">Pork</option>
                     </select>
                 </div>
-                <div className="form-group">
+                <div className="mb-3">
                     <label className="form-label" htmlFor="count" style={{ color: "white" }}>Weight in kg</label>
                     <input
                         type="number"
@@ -58,7 +64,18 @@ const SVForm = (props) => {
                         value={state.count}
                     />
                 </div>
-                <div className="form-group">
+                <div className="mb-3">
+                    <label className="form-label" htmlFor="temperature" style={{ color: "white" }}>Temperature</label>
+                    <input
+                        type="number"
+                        name="temperature"
+                        id="temperature"
+                        className="form-control"
+                        onChange={onChange}
+                        value={state.temperature}
+                    />
+                </div>
+                <div className="mb-3">
                     <label className="form-label" htmlFor="price" style={{ color: "white" }}>Time in hours</label>
                     <input
                         type="number"
@@ -70,18 +87,7 @@ const SVForm = (props) => {
                         value={state.price}
                     />
                 </div>
-                <div className="form-group">
-                    <label className="form-label" htmlFor="temperature" style={{ color: "white" }}>Temperature</label>
-                    <input
-                        type="number"
-                        name="temperature"
-                        id="temperature"
-                        className="form-control"
-                        onChange={onChange}
-                        value={state.temperature}
-                    />
-                </div>
-                <input type="submit" value="Add" className="btn btn-secondary" />
+                <button type="submit" className="btn btn-primary">Add</button>
             </form>
         </div>
     );
