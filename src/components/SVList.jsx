@@ -89,8 +89,8 @@ const SVList = (props) => {
 			<thead>
 				<tr>
 					<th>Meat type</th>
-					<th>Weight in kg</th>
-					<th>Time in hours</th>
+					<th>Weight</th>
+					<th>Time</th>
 					<th>Temperature</th>
 					<th>Remove</th>
 					<th>Edit</th>

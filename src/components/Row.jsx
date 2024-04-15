@@ -7,9 +7,9 @@ const Row = (props) => {
 	return(
 		<tr>
 			<td>{props.item.type}</td>
-			<td>{props.item.count}</td>
-			<td>{props.item.price}</td>
-			<td>{props.item.temperature}</td>
+			<td>{props.item.count} Kg</td>
+			<td>{props.item.price} h</td>
+			<td>{props.item.temperature}°C</td>
 			<td><AiFillDelete
 				onClick={() => props.changeMode("remove",props.index)}>Remove</AiFillDelete></td>
 			<td><BiSolidEdit
