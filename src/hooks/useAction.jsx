@@ -17,7 +17,7 @@ const useAction = () => {
 		action:""
 	})
 	
-	//HELPERS FUNCTIONS
+	//HELPER FUNCTIONS
 	
 	useEffect(() => {
 		if(sessionStorage.getItem("state")) {
