@@ -10,9 +10,9 @@ const Row = (props) => {
 			<td>{props.item.count} Kg</td>
 			<td>{props.item.price} h</td>
 			<td>{props.item.temperature}°C</td>
-			<td><AiFillDelete
+			<td><AiFillDelete size={20}
 				onClick={() => props.changeMode("remove",props.index)}>Remove</AiFillDelete></td>
-			<td><BiSolidEdit
+			<td><BiSolidEdit size={20}
 				onClick={() => props.changeMode("edit",props.index)}>Edit</BiSolidEdit></td>
 		</tr>
 	)

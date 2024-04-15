@@ -14,10 +14,10 @@ function App() {
 
 	let message = <></>
 	if(state.loading) {
-		message = <h4>Loading ...</h4>
+		message = <h4 style={{ color: 'white' }}>Loading ...</h4>
 	}
 	if(state.error) {
-		message = <h4>{state.error}</h4>
+		message = <h4 style={{ color: 'white' }}>{state.error}</h4>
 	}
 	if(state.isLogged) {
 		return (

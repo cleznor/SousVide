@@ -2,6 +2,8 @@ import {useState} from 'react';
 import Row from './Row';
 import RemoveRow from './RemoveRow';
 import EditRow from './EditRow';
+import { MdManageSearch } from "react-icons/md";
+
 
 const SVList = (props) => {
 	
@@ -83,7 +85,7 @@ const SVList = (props) => {
 					onChange={onChange}
 					value={search.type}
 					style={{ marginLeft: "10px" }}/>
-			<button className="btn btn-primary" onClick={searchByType}>Search</button>
+			<MdManageSearch size={40} onClick={searchByType}></MdManageSearch>
 		</div>
 		<table className="table table-striped">
 			<thead>
